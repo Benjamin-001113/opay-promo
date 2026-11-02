@@ -132,7 +132,7 @@ const [formResponse, setFormResponse] = useState("");
 
         <section id="contact" className="contact reveal">
 <a
-  href="https://wa.me/07049471021"
+  href="https://wa.me/+2347049471021"
   target="_blank"
   rel="noopener noreferrer"
   className="whatsapp-link"
