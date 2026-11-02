@@ -1,38 +1,317 @@
-.App {
-  text-align: center;
+
+/* GENERAL PAGE */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e8f0eb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* HEADER */
+header {
+  background-color: #008f50;
+}
+
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 15px 30px;
+}
+
+nav h2 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav a {
+  color: white;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* MAIN CONTENT */
+main {
+  padding: 20px;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text h1 {
+  color: #008f50;
+  font-size: 45px;
+}
+
+.hero-text p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-text button {
+  background-color: #008f50;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.hero-image {
+  flex: 1;
+  background-color: #d6f5e3;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* OFFERS SECTION */
+.offers {
+  padding: 50px 30px;
+  background-color: white;
+  text-align: center;
+}
+
+.offers h1 {
+  color: #008f50;
+}
+
+.offer-card {
+  display: inline-block;
+  background-color: #e5f8ed;
+  padding: 25px;
+  margin: 10px;
+  width: 230px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.offer-card h2 {
+  color: #008f50;
+}
+
+.offer-card button {
+  background-color: #008f50;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #008f50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  color: white;
+}
+
+/* MOBILE DESIGN */
+@media (max-width: 768px) {
+  .page {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
   }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-image {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .offer-card {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+.offer-details {
+  background-color: #d6f5e3;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 500px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.offer-details h2 {
+  color: #008f50;
+}
+
+
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f0fff5;
+}
+
+.contact h1 {
+  color: #008f50;
+}
+
+.contact form {
+  max-width: 450px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.contact textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.whatsapp-link {
+  text-decoration: none;
+}
+
+.whatsapp-link button {
+  background-color: #25D366;
+  color: white;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 30px;
+}
+
+.offers h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.offer-card {
+  background-color: #e5f8ed;
+  padding: 25px;
+  width: 230px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px red;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.offer-card {
+  animation: cardEntrance 0.8s ease forwards;
+  transition: transform 1s ease, box-shadow 0.4s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 5px;
+  animation: floatImage 3s ease-in-out infinite;
+}
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
   }
 }
